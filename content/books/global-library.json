@@ -2,19 +2,19 @@
   "categories": {
     "fundamentals": {
       "title": "Fundamentals & Theory",
-      "books": ["pattern-recognition", "elements-statistical-learning", "introduction-statistical-learning", "machine-learning-yearning"]
+      "books": ["pattern-recognition", "elements-statistical-learning", "introduction-statistical-learning", "machine-learning-yearning", "ai-modern-approach", "probabilistic-reasoning", "information-theory"]
     },
     "practical": {
       "title": "Practical & Applied",
-      "books": ["hands-on-ml", "python-machine-learning", "practical-statistics", "feature-engineering"]
+      "books": ["hands-on-ml", "python-machine-learning", "practical-statistics", "feature-engineering", "data-science-scratch", "python-data-analysis", "machine-learning-engineering", "building-ml-systems", "interpretable-ml"]
     },
     "deep-learning": {
       "title": "Deep Learning",
-      "books": ["deep-learning-goodfellow", "deep-learning-with-python", "neural-networks-deep-learning", "deep-learning-pytorch"]
+      "books": ["deep-learning-goodfellow", "deep-learning-with-python", "neural-networks-deep-learning", "deep-learning-pytorch", "generative-deep-learning", "transformers-nlp", "deep-learning-fastai"]
     },
     "specialized": {
       "title": "Specialized Topics",
-      "books": ["nlp-with-python", "computer-vision-modern-approach", "reinforcement-learning-introduction", "probabilistic-ml"]
+      "books": ["nlp-with-python", "computer-vision-modern-approach", "reinforcement-learning-introduction", "probabilistic-ml", "speech-language-processing", "computer-vision-algorithms", "ai-ethics", "weapons-math-destruction", "race-after-technology"]
     }
   },
   "books": {
@@ -173,6 +173,266 @@
       "coverImage": "/images/book-covers/nlp-python.jpg",
       "publishYear": 2009,
       "pages": 504
+    },
+    "ai-modern-approach": {
+      "title": "Artificial Intelligence: A Modern Approach",
+      "authors": ["Stuart Russell", "Peter Norvig"],
+      "isbn": "978-0134610993",
+      "description": "The leading textbook in artificial intelligence, comprehensive coverage of AI theory and practice.",
+      "difficulty": "intermediate",
+      "topics": ["artificial-intelligence", "search", "logic", "planning", "machine-learning"],
+      "amazonLink": "https://amazon.com/dp/0134610997",
+      "rating": 4.3,
+      "coverImage": "/images/book-covers/ai-modern-approach.jpg",
+      "publishYear": 2020,
+      "pages": 1136
+    },
+    "probabilistic-reasoning": {
+      "title": "Probabilistic Reasoning in Intelligent Systems",
+      "authors": ["Judea Pearl"],
+      "isbn": "978-1558604797",
+      "description": "Foundational work on probabilistic reasoning and Bayesian networks in AI systems.",
+      "difficulty": "advanced",
+      "topics": ["probability", "bayesian-networks", "reasoning", "uncertainty"],
+      "amazonLink": "https://amazon.com/dp/1558604790",
+      "rating": 4.2,
+      "coverImage": "/images/book-covers/probabilistic-reasoning.jpg",
+      "publishYear": 1988,
+      "pages": 552
+    },
+    "information-theory": {
+      "title": "Elements of Information Theory",
+      "authors": ["Thomas Cover", "Joy Thomas"],
+      "isbn": "978-0471241959",
+      "description": "Comprehensive treatment of information theory with applications to machine learning.",
+      "difficulty": "advanced",
+      "topics": ["information-theory", "entropy", "coding", "machine-learning"],
+      "amazonLink": "https://amazon.com/dp/0471241954",
+      "rating": 4.4,
+      "coverImage": "/images/book-covers/information-theory.jpg",
+      "publishYear": 2006,
+      "pages": 748
+    },
+    "data-science-scratch": {
+      "title": "Data Science from Scratch",
+      "authors": ["Joel Grus"],
+      "isbn": "978-1492041139",
+      "description": "Learn data science fundamentals by building everything from scratch using Python.",
+      "difficulty": "beginner",
+      "topics": ["data-science", "python", "statistics", "machine-learning"],
+      "amazonLink": "https://amazon.com/dp/1492041130",
+      "rating": 4.3,
+      "coverImage": "/images/book-covers/data-science-scratch.jpg",
+      "publishYear": 2019,
+      "pages": 406
+    },
+    "python-data-analysis": {
+      "title": "Python for Data Analysis",
+      "authors": ["Wes McKinney"],
+      "isbn": "978-1491957660",
+      "description": "Essential tools for data manipulation and analysis with pandas, NumPy, and IPython.",
+      "difficulty": "intermediate",
+      "topics": ["python", "pandas", "data-analysis", "numpy"],
+      "amazonLink": "https://amazon.com/dp/1491957662",
+      "rating": 4.4,
+      "coverImage": "/images/book-covers/python-data-analysis.jpg",
+      "publishYear": 2017,
+      "pages": 544
+    },
+    "machine-learning-engineering": {
+      "title": "Machine Learning Engineering",
+      "authors": ["Andriy Burkov"],
+      "isbn": "978-1999579579",
+      "description": "Practical guide to building and deploying machine learning systems in production.",
+      "difficulty": "intermediate",
+      "topics": ["machine-learning", "engineering", "deployment", "production"],
+      "amazonLink": "https://amazon.com/dp/1999579577",
+      "rating": 4.5,
+      "coverImage": "/images/book-covers/ml-engineering.jpg",
+      "publishYear": 2020,
+      "pages": 326
+    },
+    "building-ml-systems": {
+      "title": "Building Machine Learning Systems with Python",
+      "authors": ["Willi Richert", "Luis Pedro Coelho"],
+      "isbn": "978-1784392772",
+      "description": "Practical approach to building machine learning applications with Python libraries.",
+      "difficulty": "intermediate",
+      "topics": ["machine-learning", "python", "systems", "applications"],
+      "amazonLink": "https://amazon.com/dp/1784392774",
+      "rating": 4.1,
+      "coverImage": "/images/book-covers/building-ml-systems.jpg",
+      "publishYear": 2015,
+      "pages": 290
+    },
+    "interpretable-ml": {
+      "title": "Interpretable Machine Learning",
+      "authors": ["Christoph Molnar"],
+      "isbn": "978-0244768522",
+      "description": "Comprehensive guide to making machine learning models interpretable and explainable.",
+      "difficulty": "intermediate",
+      "topics": ["interpretability", "explainable-ai", "machine-learning", "ethics"],
+      "amazonLink": "https://amazon.com/dp/0244768528",
+      "rating": 4.6,
+      "coverImage": "/images/book-covers/interpretable-ml.jpg",
+      "publishYear": 2020,
+      "pages": 320
+    },
+    "generative-deep-learning": {
+      "title": "Generative Deep Learning",
+      "authors": ["David Foster"],
+      "isbn": "978-1492041948",
+      "description": "Comprehensive guide to generative models including VAEs, GANs, and autoregressive models.",
+      "difficulty": "advanced",
+      "topics": ["generative-models", "deep-learning", "gans", "vaes"],
+      "amazonLink": "https://amazon.com/dp/1492041947",
+      "rating": 4.4,
+      "coverImage": "/images/book-covers/generative-deep-learning.jpg",
+      "publishYear": 2019,
+      "pages": 330
+    },
+    "transformers-nlp": {
+      "title": "Natural Language Processing with Transformers",
+      "authors": ["Lewis Tunstall", "Leandro von Werra", "Thomas Wolf"],
+      "isbn": "978-1098103248",
+      "description": "Practical guide to building NLP applications with transformer models and Hugging Face.",
+      "difficulty": "intermediate",
+      "topics": ["transformers", "nlp", "bert", "gpt", "hugging-face"],
+      "amazonLink": "https://amazon.com/dp/1098103246",
+      "rating": 4.5,
+      "coverImage": "/images/book-covers/transformers-nlp.jpg",
+      "publishYear": 2022,
+      "pages": 426
+    },
+    "deep-learning-fastai": {
+      "title": "Deep Learning for Coders with fastai and PyTorch",
+      "authors": ["Jeremy Howard", "Sylvain Gugger"],
+      "isbn": "978-1492045526",
+      "description": "Practical deep learning approach using fastai library and modern techniques.",
+      "difficulty": "intermediate",
+      "topics": ["deep-learning", "fastai", "pytorch", "practical"],
+      "amazonLink": "https://amazon.com/dp/1492045527",
+      "rating": 4.7,
+      "coverImage": "/images/book-covers/deep-learning-fastai.jpg",
+      "publishYear": 2020,
+      "pages": 624
+    },
+    "speech-language-processing": {
+      "title": "Speech and Language Processing",
+      "authors": ["Daniel Jurafsky", "James Martin"],
+      "isbn": "978-0131873216",
+      "description": "Comprehensive textbook on computational linguistics and natural language processing.",
+      "difficulty": "advanced",
+      "topics": ["nlp", "computational-linguistics", "speech", "language"],
+      "amazonLink": "https://amazon.com/dp/0131873210",
+      "rating": 4.3,
+      "coverImage": "/images/book-covers/speech-language-processing.jpg",
+      "publishYear": 2008,
+      "pages": 988
+    },
+    "computer-vision-algorithms": {
+      "title": "Computer Vision: Algorithms and Applications",
+      "authors": ["Richard Szeliski"],
+      "isbn": "978-1848829343",
+      "description": "Comprehensive treatment of computer vision algorithms with practical applications.",
+      "difficulty": "advanced",
+      "topics": ["computer-vision", "algorithms", "image-processing", "applications"],
+      "amazonLink": "https://amazon.com/dp/1848829345",
+      "rating": 4.4,
+      "coverImage": "/images/book-covers/computer-vision-algorithms.jpg",
+      "publishYear": 2010,
+      "pages": 812
+    },
+    "ai-ethics": {
+      "title": "The Ethical Algorithm",
+      "authors": ["Michael Kearns", "Aaron Roth"],
+      "isbn": "978-0190948207",
+      "description": "Exploration of algorithmic fairness, privacy, and ethical considerations in AI systems.",
+      "difficulty": "intermediate",
+      "topics": ["ai-ethics", "fairness", "privacy", "algorithms"],
+      "amazonLink": "https://amazon.com/dp/0190948205",
+      "rating": 4.2,
+      "coverImage": "/images/book-covers/ethical-algorithm.jpg",
+      "publishYear": 2019,
+      "pages": 256
+    },
+    "weapons-math-destruction": {
+      "title": "Weapons of Math Destruction",
+      "authors": ["Cathy O'Neil"],
+      "isbn": "978-0553418811",
+      "description": "Critical examination of how big data and algorithms can perpetuate inequality and bias.",
+      "difficulty": "beginner",
+      "topics": ["algorithmic-bias", "data-ethics", "social-impact", "fairness"],
+      "amazonLink": "https://amazon.com/dp/0553418815",
+      "rating": 4.1,
+      "coverImage": "/images/book-covers/weapons-math-destruction.jpg",
+      "publishYear": 2016,
+      "pages": 272
+    },
+    "race-after-technology": {
+      "title": "Race After Technology",
+      "authors": ["Ruha Benjamin"],
+      "isbn": "978-1509526406",
+      "description": "Analysis of how technology can reproduce and amplify racial bias and discrimination.",
+      "difficulty": "beginner",
+      "topics": ["algorithmic-bias", "race", "technology", "social-justice"],
+      "amazonLink": "https://amazon.com/dp/1509526404",
+      "rating": 4.3,
+      "coverImage": "/images/book-covers/race-after-technology.jpg",
+      "publishYear": 2019,
+      "pages": 172
+    },
+    "practical-statistics": {
+      "title": "Practical Statistics for Data Scientists",
+      "authors": ["Peter Bruce", "Andrew Bruce", "Peter Gedeck"],
+      "isbn": "978-1492072935",
+      "description": "Essential statistical methods for data science with practical examples and R/Python code.",
+      "difficulty": "intermediate",
+      "topics": ["statistics", "data-science", "r", "python"],
+      "amazonLink": "https://amazon.com/dp/1492072931",
+      "rating": 4.3,
+      "coverImage": "/images/book-covers/practical-statistics.jpg",
+      "publishYear": 2020,
+      "pages": 350
+    },
+    "feature-engineering": {
+      "title": "Feature Engineering for Machine Learning",
+      "authors": ["Alice Zheng", "Amanda Casari"],
+      "isbn": "978-1491953242",
+      "description": "Comprehensive guide to feature engineering techniques for improving machine learning models.",
+      "difficulty": "intermediate",
+      "topics": ["feature-engineering", "machine-learning", "data-preprocessing", "python"],
+      "amazonLink": "https://amazon.com/dp/1491953241",
+      "rating": 4.2,
+      "coverImage": "/images/book-covers/feature-engineering.jpg",
+      "publishYear": 2018,
+      "pages": 218
+    },
+    "deep-learning-pytorch": {
+      "title": "Deep Learning with PyTorch",
+      "authors": ["Eli Stevens", "Luca Antiga", "Thomas Viehmann"],
+      "isbn": "978-1617295263",
+      "description": "Practical guide to deep learning using PyTorch framework with hands-on examples.",
+      "difficulty": "intermediate",
+      "topics": ["deep-learning", "pytorch", "neural-networks", "python"],
+      "amazonLink": "https://amazon.com/dp/1617295264",
+      "rating": 4.4,
+      "coverImage": "/images/book-covers/deep-learning-pytorch.jpg",
+      "publishYear": 2020,
+      "pages": 520
+    },
+    "probabilistic-ml": {
+      "title": "Probabilistic Machine Learning: An Introduction",
+      "authors": ["Kevin Murphy"],
+      "isbn": "978-0262046824",
+      "description": "Comprehensive introduction to probabilistic approaches in machine learning.",
+      "difficulty": "advanced",
+      "topics": ["probabilistic-ml", "bayesian-methods", "machine-learning", "statistics"],
+      "amazonLink": "https://amazon.com/dp/0262046822",
+      "rating": 4.5,
+      "coverImage": "/images/book-covers/probabilistic-ml.jpg",
+      "publishYear": 2022,
+      "pages": 826
     }
   }
 }
