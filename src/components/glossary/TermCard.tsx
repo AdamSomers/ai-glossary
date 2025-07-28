@@ -20,15 +20,15 @@ const TermCard: React.FC<TermCardProps> = ({ term, showBookRecommendations = tru
   const readingTime = getReadingTime(term.detailedExplanation);
 
   return (
-    <Card className="overflow-hidden">
+    <div className="card-hover group">
       {/* Header - Always Visible */}
-      <div className="p-6">
-        <div className="flex items-start justify-between mb-4">
+      <div className="p-8">
+        <div className="flex items-start justify-between mb-6">
           <div className="flex-1">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
               {term.title}
             </h3>
-            <div className="flex flex-wrap gap-2 mb-3">
+            <div className="flex flex-wrap gap-3 mb-4">
               <Badge variant="difficulty" difficulty={term.difficulty}>
                 {term.difficulty}
               </Badge>
@@ -48,111 +48,112 @@ const TermCard: React.FC<TermCardProps> = ({ term, showBookRecommendations = tru
             </div>
           </div>
           
-          <Button
-            variant="ghost"
-            size="sm"
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="ml-4 flex-shrink-0"
+            className="ml-6 flex-shrink-0 p-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             {isExpanded ? (
-              <ChevronUp className="w-5 h-5" />
+              <ChevronUp className="w-6 h-6" />
             ) : (
-              <ChevronDown className="w-5 h-5" />
+              <ChevronDown className="w-6 h-6" />
             )}
-          </Button>
+          </button>
         </div>
 
         {/* Brief Definition - Always Visible */}
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-lg text-gray-700 leading-relaxed mb-6 font-medium">
           {term.briefDefinition}
         </p>
 
         {/* Expand/Collapse Button */}
-        <div className="mt-4 flex items-center justify-between">
-          <div className="flex items-center text-sm text-gray-500 space-x-4">
-            <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-1" />
+        <div className="flex items-center justify-between">
+          <div className="flex items-center text-sm text-gray-500 space-x-6">
+            <div className="flex items-center bg-gray-100 px-3 py-1.5 rounded-full">
+              <Clock className="w-4 h-4 mr-2" />
               {readingTime} min read
             </div>
-            <div>
+            <div className="flex items-center bg-gray-100 px-3 py-1.5 rounded-full">
               Updated {formatDate(term.lastUpdated)}
             </div>
           </div>
           
-          <Button
-            variant="outline"
-            size="sm"
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
+            className="px-6 py-3 bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-50 hover:to-purple-50 text-gray-700 hover:text-blue-600 font-semibold rounded-xl transition-all duration-300 border border-gray-200 hover:border-blue-200 shadow-sm hover:shadow-md"
           >
             {isExpanded ? 'Show Less' : 'Learn More'}
-          </Button>
+          </button>
         </div>
       </div>
 
       {/* Expanded Content */}
       {isExpanded && (
-        <div className="border-t border-gray-200 bg-gray-50">
-          <div className="p-6 space-y-6">
+        <div className="border-t border-gray-200/50 bg-gradient-to-br from-gray-50 to-blue-50/30">
+          <div className="p-8 space-y-8">
             {/* Detailed Explanation */}
             {term.detailedExplanation && (
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-sm">
+                <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mr-3"></div>
                   Detailed Explanation
                 </h4>
                 <div className="prose-custom">
-                  <p>{term.detailedExplanation}</p>
+                  <p className="text-gray-700 leading-relaxed">{term.detailedExplanation}</p>
                 </div>
               </div>
             )}
 
             {/* Key Concepts */}
             {term.keyConcepts.length > 0 && (
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-sm">
+                <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <div className="w-2 h-8 bg-gradient-to-b from-emerald-500 to-teal-500 rounded-full mr-3"></div>
                   Key Concepts
                 </h4>
-                <ul className="space-y-2">
+                <div className="grid gap-3">
                   {term.keyConcepts.map((concept, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span className="text-gray-700">{concept}</span>
-                    </li>
+                    <div key={index} className="flex items-start p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
+                      <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full mt-1.5 mr-4 flex-shrink-0 shadow-sm"></div>
+                      <span className="text-gray-800 font-medium">{concept}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             )}
 
             {/* Applications */}
             {term.applications.length > 0 && (
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-sm">
+                <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <div className="w-2 h-8 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mr-3"></div>
                   Common Applications
                 </h4>
-                <ul className="space-y-2">
+                <div className="grid gap-3">
                   {term.applications.map((application, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span className="text-gray-700">{application}</span>
-                    </li>
+                    <div key={index} className="flex items-start p-4 bg-purple-50/50 rounded-xl border border-purple-100">
+                      <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full mt-1.5 mr-4 flex-shrink-0 shadow-sm"></div>
+                      <span className="text-gray-800 font-medium">{application}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             )}
 
             {/* Prerequisites */}
             {term.prerequisites.length > 0 && (
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-sm">
+                <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <div className="w-2 h-8 bg-gradient-to-b from-orange-500 to-red-500 rounded-full mr-3"></div>
                   Prerequisites
                 </h4>
-                <ul className="space-y-2">
+                <div className="grid gap-3">
                   {term.prerequisites.map((prerequisite, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span className="text-gray-700">{prerequisite}</span>
-                    </li>
+                    <div key={index} className="flex items-start p-4 bg-orange-50/50 rounded-xl border border-orange-100">
+                      <div className="w-3 h-3 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full mt-1.5 mr-4 flex-shrink-0 shadow-sm"></div>
+                      <span className="text-gray-800 font-medium">{prerequisite}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             )}
 
@@ -228,7 +229,7 @@ const TermCard: React.FC<TermCardProps> = ({ term, showBookRecommendations = tru
           </div>
         </div>
       )}
-    </Card>
+    </div>
   );
 };
 

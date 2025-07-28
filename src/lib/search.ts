@@ -2,7 +2,7 @@ import Fuse from 'fuse.js';
 import { Term, GlobalBook, SearchFilters } from './types';
 
 // Fuse.js options for term search
-const termSearchOptions: Fuse.IFuseOptions<Term> = {
+const termSearchOptions = {
   keys: [
     { name: 'title', weight: 0.3 },
     { name: 'briefDefinition', weight: 0.25 },
@@ -16,7 +16,7 @@ const termSearchOptions: Fuse.IFuseOptions<Term> = {
 };
 
 // Fuse.js options for book search
-const bookSearchOptions: Fuse.IFuseOptions<GlobalBook> = {
+const bookSearchOptions = {
   keys: [
     { name: 'title', weight: 0.4 },
     { name: 'authors', weight: 0.3 },

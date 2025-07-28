@@ -72,7 +72,7 @@ const SearchFilter: React.FC<SearchFilterProps> = ({ terms, onFilteredTerms }) =
                           filters.difficulty !== 'all' || filters.tags.length > 0;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       {/* Search Input */}
       <div className="relative">
         <SearchInput
@@ -84,82 +84,106 @@ const SearchFilter: React.FC<SearchFilterProps> = ({ terms, onFilteredTerms }) =
       </div>
 
       {/* Filter Controls */}
-      <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-        <div className="flex flex-wrap gap-3">
-          {/* Category Filter */}
-          <select
-            value={filters.category}
-            onChange={handleCategoryChange}
-            className="filter-select"
-          >
-            {categories.map(category => (
-              <option key={category} value={category}>
-                {category === 'all' ? 'All Categories' : category}
-              </option>
-            ))}
-          </select>
+      <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/30 shadow-lg">
+        <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
+          <div className="flex flex-wrap gap-4">
+            {/* Category Filter */}
+            <div className="flex flex-col">
+              <label className="text-sm font-semibold text-gray-700 mb-2">Category</label>
+              <select
+                value={filters.category}
+                onChange={handleCategoryChange}
+                className="filter-select min-w-[140px]"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-          {/* Difficulty Filter */}
-          <select
-            value={filters.difficulty}
-            onChange={handleDifficultyChange}
-            className="filter-select"
-          >
-            {difficulties.map(difficulty => (
-              <option key={difficulty} value={difficulty}>
-                {difficulty === 'all' ? 'All Levels' : 
-                 difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
-              </option>
-            ))}
-          </select>
+            {/* Difficulty Filter */}
+            <div className="flex flex-col">
+              <label className="text-sm font-semibold text-gray-700 mb-2">Difficulty</label>
+              <select
+                value={filters.difficulty}
+                onChange={handleDifficultyChange}
+                className="filter-select min-w-[120px]"
+              >
+                {difficulties.map(difficulty => (
+                  <option key={difficulty} value={difficulty}>
+                    {difficulty === 'all' ? 'All Levels' :
+                     difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-          {/* Advanced Filters Toggle */}
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
-          >
-            <Filter className="w-4 h-4 mr-2" />
-            Tags
-          </Button>
-        </div>
+            {/* Advanced Filters Toggle */}
+            <div className="flex flex-col">
+              <label className="text-sm font-semibold text-gray-700 mb-2">Tags</label>
+              <button
+                onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
+                className={`px-4 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center ${
+                  showAdvancedFilters
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
+                    : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+                }`}
+              >
+                <Filter className="w-4 h-4 mr-2" />
+                {showAdvancedFilters ? 'Hide Tags' : 'Show Tags'}
+              </button>
+            </div>
+          </div>
 
-        {/* Clear Filters & Results Count */}
-        <div className="flex items-center gap-4">
-          <span className="text-sm text-gray-600">
-            {filteredTerms.length} of {terms.length} terms
-          </span>
-          
-          {hasActiveFilters && (
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={clearAllFilters}
-            >
-              <X className="w-4 h-4 mr-1" />
-              Clear
-            </Button>
-          )}
+          {/* Clear Filters & Results Count */}
+          <div className="flex items-center gap-6">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 px-4 py-2 rounded-xl border border-blue-200/50">
+              <span className="text-sm font-semibold text-gray-700">
+                {filteredTerms.length} of {terms.length} terms
+              </span>
+            </div>
+            
+            {hasActiveFilters && (
+              <button
+                onClick={clearAllFilters}
+                className="px-4 py-2 bg-red-100 hover:bg-red-200 text-red-700 font-semibold rounded-xl transition-all duration-300 flex items-center"
+              >
+                <X className="w-4 h-4 mr-2" />
+                Clear All
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
       {/* Advanced Filters - Tags */}
       {showAdvancedFilters && (
-        <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-          <h3 className="text-sm font-medium text-gray-900 mb-3">Filter by Tags</h3>
-          <div className="flex flex-wrap gap-2">
+        <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-200/50 shadow-sm">
+          <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+            <div className="w-2 h-6 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mr-3"></div>
+            Filter by Tags
+          </h3>
+          <div className="flex flex-wrap gap-3">
             {popularTags.map(({ tag, count }) => (
               <button
                 key={tag}
                 onClick={() => handleTagToggle(tag)}
-                className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border transition-colors duration-200 ${
+                className={`inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold border transition-all duration-300 transform hover:scale-105 ${
                   filters.tags.includes(tag)
-                    ? 'bg-primary-100 text-primary-800 border-primary-200'
-                    : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white border-transparent shadow-lg'
+                    : 'bg-white/80 text-gray-700 border-gray-200 hover:bg-white hover:border-blue-300 shadow-sm'
                 }`}
               >
                 {tag}
-                <span className="ml-1 text-gray-500">({count})</span>
+                <span className={`ml-2 px-2 py-0.5 rounded-full text-xs ${
+                  filters.tags.includes(tag)
+                    ? 'bg-white/20 text-white'
+                    : 'bg-gray-100 text-gray-500'
+                }`}>
+                  {count}
+                </span>
               </button>
             ))}
           </div>
@@ -168,54 +192,57 @@ const SearchFilter: React.FC<SearchFilterProps> = ({ terms, onFilteredTerms }) =
 
       {/* Active Filters Display */}
       {hasActiveFilters && (
-        <div className="flex flex-wrap gap-2">
-          {filters.query && (
-            <Badge>
-              Search: "{filters.query}"
-              <button
-                onClick={() => setFilters(prev => ({ ...prev, query: '' }))}
-                className="ml-1 hover:text-red-600"
-              >
-                <X className="w-3 h-3" />
-              </button>
-            </Badge>
-          )}
-          
-          {filters.category !== 'all' && (
-            <Badge variant="category" category={filters.category}>
-              {filters.category}
-              <button
-                onClick={() => setFilters(prev => ({ ...prev, category: 'all' }))}
-                className="ml-1 hover:text-red-600"
-              >
-                <X className="w-3 h-3" />
-              </button>
-            </Badge>
-          )}
-          
-          {filters.difficulty !== 'all' && (
-            <Badge variant="difficulty" difficulty={filters.difficulty as any}>
-              {filters.difficulty}
-              <button
-                onClick={() => setFilters(prev => ({ ...prev, difficulty: 'all' }))}
-                className="ml-1 hover:text-red-600"
-              >
-                <X className="w-3 h-3" />
-              </button>
-            </Badge>
-          )}
-          
-          {filters.tags.map(tag => (
-            <Badge key={tag}>
-              {tag}
-              <button
-                onClick={() => handleTagToggle(tag)}
-                className="ml-1 hover:text-red-600"
-              >
-                <X className="w-3 h-3" />
-              </button>
-            </Badge>
-          ))}
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-white/30 shadow-sm">
+          <h4 className="text-sm font-semibold text-gray-700 mb-3">Active Filters:</h4>
+          <div className="flex flex-wrap gap-2">
+            {filters.query && (
+              <div className="inline-flex items-center px-3 py-1.5 bg-blue-100 text-blue-800 rounded-xl text-sm font-medium">
+                Search: "{filters.query}"
+                <button
+                  onClick={() => setFilters(prev => ({ ...prev, query: '' }))}
+                  className="ml-2 hover:text-red-600 transition-colors duration-200"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </div>
+            )}
+            
+            {filters.category !== 'all' && (
+              <div className="inline-flex items-center px-3 py-1.5 bg-purple-100 text-purple-800 rounded-xl text-sm font-medium">
+                {filters.category}
+                <button
+                  onClick={() => setFilters(prev => ({ ...prev, category: 'all' }))}
+                  className="ml-2 hover:text-red-600 transition-colors duration-200"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </div>
+            )}
+            
+            {filters.difficulty !== 'all' && (
+              <div className="inline-flex items-center px-3 py-1.5 bg-emerald-100 text-emerald-800 rounded-xl text-sm font-medium">
+                {filters.difficulty}
+                <button
+                  onClick={() => setFilters(prev => ({ ...prev, difficulty: 'all' }))}
+                  className="ml-2 hover:text-red-600 transition-colors duration-200"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </div>
+            )}
+            
+            {filters.tags.map(tag => (
+              <div key={tag} className="inline-flex items-center px-3 py-1.5 bg-orange-100 text-orange-800 rounded-xl text-sm font-medium">
+                {tag}
+                <button
+                  onClick={() => handleTagToggle(tag)}
+                  className="ml-2 hover:text-red-600 transition-colors duration-200"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>
