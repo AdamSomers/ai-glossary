@@ -2,6 +2,7 @@ import { getAllTerms } from '@/lib/content';
 import { getGlobalLibrary } from '@/lib/books';
 import TermList from '@/components/glossary/TermList';
 import SearchFilter from '@/components/glossary/SearchFilter';
+import HeroButtons from '@/components/ui/HeroButtons';
 import { BookOpen, Brain, Zap, Users } from 'lucide-react';
 
 export default async function HomePage() {
@@ -14,7 +15,6 @@ export default async function HomePage() {
     categories: Array.from(new Set(terms.map(term => term.category))).length,
     difficulties: ['beginner', 'intermediate', 'advanced'].length,
   };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -44,16 +44,7 @@ export default async function HomePage() {
               From beginner-friendly definitions to advanced concepts, plus curated book recommendations.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="btn-secondary">
-                <Brain className="w-5 h-5 mr-2" />
-                Explore Terms
-              </button>
-              <button className="btn-outline">
-                <BookOpen className="w-5 h-5 mr-2" />
-                Browse Books
-              </button>
-            </div>
+            <HeroButtons />
           </div>
 
           {/* Stats */}
@@ -94,7 +85,7 @@ export default async function HomePage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50/50">
+      <section id="terms-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50/50">
         <div className="max-w-7xl mx-auto">
           {/* Search and Filter */}
           <div className="mb-12">
