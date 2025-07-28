@@ -1,0 +1,81 @@
+{
+  "termSlug": "neural-networks",
+  "books": [
+    {
+      "id": "neural-networks-deep-learning",
+      "title": "Neural Networks and Deep Learning",
+      "authors": ["Michael Nielsen"],
+      "isbn": "978-0000000000",
+      "description": "Free online book providing intuitive explanations of neural networks and deep learning concepts.",
+      "difficulty": "beginner",
+      "relevanceScore": 10,
+      "specificChapters": [
+        "Chapter 1: Using neural nets to recognize handwritten digits",
+        "Chapter 2: How the backpropagation algorithm works",
+        "Chapter 3: Improving the way neural networks learn",
+        "Chapter 4: A visual proof that neural nets can compute any function"
+      ],
+      "whyRecommended": "Best introduction to neural networks with clear, intuitive explanations and visual examples. Perfect for building foundational understanding.",
+      "amazonLink": "http://neuralnetworksanddeeplearning.com/",
+      "rating": 4.8,
+      "coverImage": "/images/book-covers/neural-networks-nielsen.jpg"
+    },
+    {
+      "id": "deep-learning-goodfellow",
+      "title": "Deep Learning",
+      "authors": ["Ian Goodfellow", "Yoshua Bengio", "Aaron Courville"],
+      "isbn": "978-0262035613",
+      "description": "The definitive textbook on deep learning, covering mathematical foundations and practical applications.",
+      "difficulty": "advanced",
+      "relevanceScore": 9,
+      "specificChapters": [
+        "Chapter 6: Deep Feedforward Networks",
+        "Chapter 8: Optimization for Training Deep Models",
+        "Chapter 9: Convolutional Networks",
+        "Chapter 10: Sequence Modeling: Recurrent and Recursive Nets"
+      ],
+      "whyRecommended": "Comprehensive and authoritative treatment of neural networks and deep learning by leading researchers in the field.",
+      "amazonLink": "https://amazon.com/dp/0262035618",
+      "rating": 4.5,
+      "coverImage": "/images/book-covers/deep-learning-goodfellow.jpg"
+    },
+    {
+      "id": "deep-learning-with-python",
+      "title": "Deep Learning with Python",
+      "authors": ["François Chollet"],
+      "isbn": "978-1617294433",
+      "description": "Practical introduction to deep learning using Keras and TensorFlow, written by the creator of Keras.",
+      "difficulty": "intermediate",
+      "relevanceScore": 8,
+      "specificChapters": [
+        "Chapter 3: Getting started with neural networks",
+        "Chapter 4: Fundamentals of machine learning",
+        "Chapter 5: Deep learning for computer vision",
+        "Chapter 6: Deep learning for text and sequences"
+      ],
+      "whyRecommended": "Practical approach to neural networks with hands-on Keras examples, written by the creator of the Keras library.",
+      "amazonLink": "https://amazon.com/dp/1617294438",
+      "rating": 4.7,
+      "coverImage": "/images/book-covers/deep-learning-python.jpg"
+    },
+    {
+      "id": "hands-on-ml",
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow",
+      "authors": ["Aurélien Géron"],
+      "isbn": "978-1492032649",
+      "description": "Practical guide to machine learning with hands-on examples and real-world applications using popular Python libraries.",
+      "difficulty": "intermediate",
+      "relevanceScore": 7,
+      "specificChapters": [
+        "Chapter 10: Introduction to Artificial Neural Networks with Keras",
+        "Chapter 11: Training Deep Neural Networks",
+        "Chapter 12: Custom Models and Training with TensorFlow",
+        "Chapter 13: Loading and Preprocessing Data with TensorFlow"
+      ],
+      "whyRecommended": "Excellent practical introduction to implementing neural networks with modern tools and frameworks.",
+      "amazonLink": "https://amazon.com/dp/1492032646",
+      "rating": 4.6,
+      "coverImage": "/images/book-covers/hands-on-ml.jpg"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "termSlug": "machine-learning",
+  "books": [
+    {
+      "id": "hands-on-ml",
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow",
+      "authors": ["Aurélien Géron"],
+      "isbn": "978-1492032649",
+      "description": "Practical guide to machine learning with hands-on examples and real-world applications using popular Python libraries.",
+      "difficulty": "intermediate",
+      "relevanceScore": 10,
+      "specificChapters": [
+        "Chapter 1: The Machine Learning Landscape",
+        "Chapter 2: End-to-End Machine Learning Project",
+        "Chapter 4: Training Models",
+        "Chapter 5: Support Vector Machines"
+      ],
+      "whyRecommended": "Best practical introduction to ML with code examples, real projects, and comprehensive coverage of both traditional ML and deep learning approaches.",
+      "amazonLink": "https://amazon.com/dp/1492032646",
+      "rating": 4.6,
+      "coverImage": "/images/book-covers/hands-on-ml.jpg"
+    },
+    {
+      "id": "introduction-statistical-learning",
+      "title": "An Introduction to Statistical Learning",
+      "authors": ["Gareth James", "Daniela Witten", "Trevor Hastie", "Robert Tibshirani"],
+      "isbn": "978-1461471370",
+      "description": "Accessible introduction to statistical learning methods with R examples and practical applications.",
+      "difficulty": "beginner",
+      "relevanceScore": 9,
+      "specificChapters": [
+        "Chapter 2: Statistical Learning",
+        "Chapter 3: Linear Regression",
+        "Chapter 4: Classification",
+        "Chapter 5: Resampling Methods"
+      ],
+      "whyRecommended": "Perfect starting point for understanding the statistical foundations of machine learning with clear explanations and practical R examples.",
+      "amazonLink": "https://amazon.com/dp/1461471370",
+      "rating": 4.5,
+      "coverImage": "/images/book-covers/intro-statistical-learning.jpg"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition and Machine Learning",
+      "authors": ["Christopher Bishop"],
+      "isbn": "978-0387310732",
+      "description": "Comprehensive theoretical foundation of machine learning algorithms with mathematical rigor and practical insights.",
+      "difficulty": "advanced",
+      "relevanceScore": 8,
+      "specificChapters": [
+        "Chapter 1: Introduction",
+        "Chapter 3: Linear Models for Regression",
+        "Chapter 4: Linear Models for Classification",
+        "Chapter 9: Mixture Models and EM"
+      ],
+      "whyRecommended": "Definitive theoretical treatment of ML fundamentals with rigorous mathematical foundations and probabilistic perspective.",
+      "amazonLink": "https://amazon.com/dp/0387310738",
+      "rating": 4.4,
+      "coverImage": "/images/book-covers/pattern-recognition.jpg"
+    },
+    {
+      "id": "machine-learning-yearning",
+      "title": "Machine Learning Yearning",
+      "authors": ["Andrew Ng"],
+      "isbn": "978-0000000001",
+      "description": "Practical guide to structuring machine learning projects and making technical decisions.",
+      "difficulty": "intermediate",
+      "relevanceScore": 7,
+      "specificChapters": [
+        "Setting up development and test sets",
+        "Basic Error Analysis",
+        "Bias and Variance",
+        "Learning curves"
+      ],
+      "whyRecommended": "Essential guide for practical ML project management and decision-making, written by a leading AI researcher.",
+      "amazonLink": "https://www.mlyearning.org/",
+      "rating": 4.6,
+      "coverImage": "/images/book-covers/ml-yearning.jpg"
+    }
+  ]
+}

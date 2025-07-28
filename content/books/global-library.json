@@ -1,0 +1,178 @@
+{
+  "categories": {
+    "fundamentals": {
+      "title": "Fundamentals & Theory",
+      "books": ["pattern-recognition", "elements-statistical-learning", "introduction-statistical-learning", "machine-learning-yearning"]
+    },
+    "practical": {
+      "title": "Practical & Applied",
+      "books": ["hands-on-ml", "python-machine-learning", "practical-statistics", "feature-engineering"]
+    },
+    "deep-learning": {
+      "title": "Deep Learning",
+      "books": ["deep-learning-goodfellow", "deep-learning-with-python", "neural-networks-deep-learning", "deep-learning-pytorch"]
+    },
+    "specialized": {
+      "title": "Specialized Topics",
+      "books": ["nlp-with-python", "computer-vision-modern-approach", "reinforcement-learning-introduction", "probabilistic-ml"]
+    }
+  },
+  "books": {
+    "hands-on-ml": {
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow",
+      "authors": ["Aurélien Géron"],
+      "isbn": "978-1492032649",
+      "description": "Practical guide to machine learning with hands-on examples and real-world applications using popular Python libraries.",
+      "difficulty": "intermediate",
+      "topics": ["machine-learning", "deep-learning", "neural-networks", "python"],
+      "amazonLink": "https://amazon.com/dp/1492032646",
+      "rating": 4.6,
+      "coverImage": "/images/book-covers/hands-on-ml.jpg",
+      "publishYear": 2019,
+      "pages": 851
+    },
+    "pattern-recognition": {
+      "title": "Pattern Recognition and Machine Learning",
+      "authors": ["Christopher Bishop"],
+      "isbn": "978-0387310732",
+      "description": "Comprehensive theoretical foundation of machine learning algorithms with mathematical rigor and practical insights.",
+      "difficulty": "advanced",
+      "topics": ["machine-learning", "pattern-recognition", "bayesian-methods", "neural-networks"],
+      "amazonLink": "https://amazon.com/dp/0387310738",
+      "rating": 4.4,
+      "coverImage": "/images/book-covers/pattern-recognition.jpg",
+      "publishYear": 2006,
+      "pages": 738
+    },
+    "deep-learning-goodfellow": {
+      "title": "Deep Learning",
+      "authors": ["Ian Goodfellow", "Yoshua Bengio", "Aaron Courville"],
+      "isbn": "978-0262035613",
+      "description": "The definitive textbook on deep learning, covering mathematical foundations and practical applications.",
+      "difficulty": "advanced",
+      "topics": ["deep-learning", "neural-networks", "machine-learning", "ai"],
+      "amazonLink": "https://amazon.com/dp/0262035618",
+      "rating": 4.5,
+      "coverImage": "/images/book-covers/deep-learning-goodfellow.jpg",
+      "publishYear": 2016,
+      "pages": 800
+    },
+    "deep-learning-with-python": {
+      "title": "Deep Learning with Python",
+      "authors": ["François Chollet"],
+      "isbn": "978-1617294433",
+      "description": "Practical introduction to deep learning using Keras and TensorFlow, written by the creator of Keras.",
+      "difficulty": "intermediate",
+      "topics": ["deep-learning", "python", "keras", "tensorflow", "neural-networks"],
+      "amazonLink": "https://amazon.com/dp/1617294438",
+      "rating": 4.7,
+      "coverImage": "/images/book-covers/deep-learning-python.jpg",
+      "publishYear": 2017,
+      "pages": 384
+    },
+    "elements-statistical-learning": {
+      "title": "The Elements of Statistical Learning",
+      "authors": ["Trevor Hastie", "Robert Tibshirani", "Jerome Friedman"],
+      "isbn": "978-0387848570",
+      "description": "Comprehensive treatment of statistical learning methods with emphasis on concepts and methodology.",
+      "difficulty": "advanced",
+      "topics": ["statistical-learning", "machine-learning", "data-mining", "statistics"],
+      "amazonLink": "https://amazon.com/dp/0387848576",
+      "rating": 4.3,
+      "coverImage": "/images/book-covers/elements-statistical-learning.jpg",
+      "publishYear": 2009,
+      "pages": 745
+    },
+    "introduction-statistical-learning": {
+      "title": "An Introduction to Statistical Learning",
+      "authors": ["Gareth James", "Daniela Witten", "Trevor Hastie", "Robert Tibshirani"],
+      "isbn": "978-1461471370",
+      "description": "Accessible introduction to statistical learning methods with R examples and practical applications.",
+      "difficulty": "beginner",
+      "topics": ["statistical-learning", "machine-learning", "r-programming", "statistics"],
+      "amazonLink": "https://amazon.com/dp/1461471370",
+      "rating": 4.5,
+      "coverImage": "/images/book-covers/intro-statistical-learning.jpg",
+      "publishYear": 2013,
+      "pages": 426
+    },
+    "python-machine-learning": {
+      "title": "Python Machine Learning",
+      "authors": ["Sebastian Raschka", "Vahid Mirjalili"],
+      "isbn": "978-1789955750",
+      "description": "Comprehensive guide to machine learning with Python, covering theory and practical implementation.",
+      "difficulty": "intermediate",
+      "topics": ["machine-learning", "python", "scikit-learn", "tensorflow", "data-science"],
+      "amazonLink": "https://amazon.com/dp/1789955750",
+      "rating": 4.4,
+      "coverImage": "/images/book-covers/python-ml.jpg",
+      "publishYear": 2019,
+      "pages": 770
+    },
+    "neural-networks-deep-learning": {
+      "title": "Neural Networks and Deep Learning",
+      "authors": ["Michael Nielsen"],
+      "isbn": "978-0000000000",
+      "description": "Free online book providing intuitive explanations of neural networks and deep learning concepts.",
+      "difficulty": "beginner",
+      "topics": ["neural-networks", "deep-learning", "backpropagation", "machine-learning"],
+      "amazonLink": "http://neuralnetworksanddeeplearning.com/",
+      "rating": 4.8,
+      "coverImage": "/images/book-covers/neural-networks-nielsen.jpg",
+      "publishYear": 2015,
+      "pages": 300
+    },
+    "machine-learning-yearning": {
+      "title": "Machine Learning Yearning",
+      "authors": ["Andrew Ng"],
+      "isbn": "978-0000000001",
+      "description": "Practical guide to structuring machine learning projects and making technical decisions.",
+      "difficulty": "intermediate",
+      "topics": ["machine-learning", "project-management", "strategy", "best-practices"],
+      "amazonLink": "https://www.mlyearning.org/",
+      "rating": 4.6,
+      "coverImage": "/images/book-covers/ml-yearning.jpg",
+      "publishYear": 2018,
+      "pages": 118
+    },
+    "reinforcement-learning-introduction": {
+      "title": "Reinforcement Learning: An Introduction",
+      "authors": ["Richard Sutton", "Andrew Barto"],
+      "isbn": "978-0262039246",
+      "description": "Comprehensive introduction to reinforcement learning covering theory and algorithms.",
+      "difficulty": "advanced",
+      "topics": ["reinforcement-learning", "machine-learning", "ai", "decision-making"],
+      "amazonLink": "https://amazon.com/dp/0262039249",
+      "rating": 4.3,
+      "coverImage": "/images/book-covers/rl-introduction.jpg",
+      "publishYear": 2018,
+      "pages": 552
+    },
+    "computer-vision-modern-approach": {
+      "title": "Computer Vision: A Modern Approach",
+      "authors": ["David Forsyth", "Jean Ponce"],
+      "isbn": "978-0136085928",
+      "description": "Comprehensive textbook covering computer vision algorithms and applications.",
+      "difficulty": "advanced",
+      "topics": ["computer-vision", "image-processing", "machine-learning", "ai"],
+      "amazonLink": "https://amazon.com/dp/0136085928",
+      "rating": 4.2,
+      "coverImage": "/images/book-covers/computer-vision.jpg",
+      "publishYear": 2011,
+      "pages": 793
+    },
+    "nlp-with-python": {
+      "title": "Natural Language Processing with Python",
+      "authors": ["Steven Bird", "Ewan Klein", "Edward Loper"],
+      "isbn": "978-0596516499",
+      "description": "Practical guide to natural language processing using Python and NLTK library.",
+      "difficulty": "intermediate",
+      "topics": ["natural-language-processing", "python", "nltk", "text-processing"],
+      "amazonLink": "https://amazon.com/dp/0596516495",
+      "rating": 4.1,
+      "coverImage": "/images/book-covers/nlp-python.jpg",
+      "publishYear": 2009,
+      "pages": 504
+    }
+  }
+}
