@@ -1,5 +1,5 @@
 ---
-title: "Artificial Intelligence"
+title: "Artificialish Intelligence"
 slug: "artificial-intelligence"
 category: "Fundamentals"
 difficulty: "beginner"
